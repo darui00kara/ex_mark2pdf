@@ -27,6 +27,6 @@ defmodule ExMark2pdf.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [{:earmark, "~> 0.1.17"}]
   end
 end
