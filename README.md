@@ -4,7 +4,7 @@ ExMark2pdf
 Roadmap
 =======
 
-- [ ] Markdown file to HTML file.
-- [ ] HTML file to PDF file.
-- [ ] Mix Custom Task.
+- [o] Markdown file to HTML file.
+- [o] HTML file to PDF file.
+- [o] Mix Custom Task.
 - [ ] Registration Hex Library
