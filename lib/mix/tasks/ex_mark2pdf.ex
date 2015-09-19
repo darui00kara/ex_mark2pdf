@@ -1,4 +1,12 @@
 defmodule Mix.Tasks.ExMark2pdf do
+  use Mix.Task
+
+  @shortdoc "Markdown file to PDF file Generator."
+
+  def run(args) do
+    markdown_to_pdf(args)
+  end
+
   defp markdown_to_html(markdown) do
     Earmark.to_html(markdown)
   end
@@ -8,13 +16,14 @@ defmodule Mix.Tasks.ExMark2pdf do
   end
 
   defp get_timestamp_string do
-    {mega_secs, secs, micro_secs} = :os.timestamp
-    Integer.to_string(mega_secs) <> Integer.to_string(secs) <> Integer.to_string(micro_secs)
+    Tuple.to_list(:os.timestamp) |> Enum.join
   end
 
-  defp create_provisional_html_file do
-    provisional_html_name = get_timestamp <> "_provisional" <> ".html"
+  defp create_provisional_html_file(timestamp, html) do
+    provisional_html_name = timestamp <> "_temp.html"
+
     File.touch!(provisional_html_name)
+    write_html(provisional_html_name, html)
 
     provisional_html_name
   end
@@ -26,14 +35,12 @@ defmodule Mix.Tasks.ExMark2pdf do
   end
 
   def markdown_to_pdf(markdown_file_path) do
-    provisional_html_name = create_provisional_html_file
+    timestamp = get_timestamp_string
     html = markdown_reader(markdown_file_path) |> markdown_to_html
-
-    write_html(provisional_html_name, html)
+    provisional_html_name = create_provisional_html_file(timestamp, html)
 
     if cmd_path = System.find_executable("wkhtmltopdf") do
-      output_pdf_name = get_timestamp <> "_result.pdf"
-      {result, 0} = System.cmd(cmd_path, [provisional_html_name, output_pdf_name])
+      {_, 0} = System.cmd(cmd_path, [provisional_html_name, timestamp <> ".pdf"])
     end
 
     File.rm!(provisional_html_name)
