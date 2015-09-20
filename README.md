@@ -1,3 +1,5 @@
+[![hex.pm version](https://img.shields.io/hexpm/v/plug.svg)](https://hex.pm/packages/ex_mark2pdf)
+
 ExMark2pdf
 ==========
 
