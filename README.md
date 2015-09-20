@@ -45,6 +45,6 @@ Roadmap
 - [x] Japanese correspondence.
 - [x] Registration Hex Library.
 - [ ] Specifying the output destination.
-- [ ] CSS
-- [ ] Javascript
-- [ ] Code highlight
+- [ ] CSS support.
+- [ ] Javascript support.
+- [ ] Code highlight.
