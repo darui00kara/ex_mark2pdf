@@ -1,6 +1,4 @@
 defmodule Mix.Tasks.ExMark2pdf do
-  use Mix.Task
-
   @moduledoc """
   This module is Custom Task of Mix.
   It provides the ability to convert from the markdown to the PDF.
@@ -26,6 +24,8 @@ defmodule Mix.Tasks.ExMark2pdf do
   """
 
   @shortdoc "Create a PDF file from Markdown."
+
+  use Mix.Task
 
   def run(args) do
     #Regex.match?(~r/.+.md$|.+.txt$/, markdown_file_path)
