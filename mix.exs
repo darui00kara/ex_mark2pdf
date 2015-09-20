@@ -5,6 +5,12 @@ defmodule ExMark2pdf.Mixfile do
     [app: :ex_mark2pdf,
      version: "0.0.1",
      elixir: "~> 1.0",
+     description: "Markdown file to PDF file Generator.",
+     package: [
+       contributors: ["darui00kara"],
+       licenses: ["Free"],
+       links: %{"GitHub" => "https://github.com/darui00kara/ex_mark2pdf"}
+     ],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
