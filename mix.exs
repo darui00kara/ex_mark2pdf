@@ -5,7 +5,7 @@ defmodule ExMark2pdf.Mixfile do
     [app: :ex_mark2pdf,
      version: "0.0.1",
      elixir: "~> 1.0",
-     description: "Markdown to PDF Converter.",
+     description: "Create a PDF file from Markdown.",
      package: [
        contributors: ["darui00kara"],
        licenses: ["Free"],

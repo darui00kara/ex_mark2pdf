@@ -19,9 +19,13 @@ defmodule Mix.Tasks.ExMark2pdf do
        Printing pages (6/6)
        Done
 
+  ## Output
+
+       Output file is current directory.
+
   """
 
-  @shortdoc "Markdown to PDF Converter."
+  @shortdoc "Create a PDF file from Markdown."
 
   def run(args) do
     #Regex.match?(~r/.+.md$|.+.txt$/, markdown_file_path)
