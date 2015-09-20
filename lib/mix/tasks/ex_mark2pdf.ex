@@ -11,7 +11,7 @@ defmodule Mix.Tasks.ExMark2pdf do
 
   ## Examples
 
-       >mix ex_mark2pdf path/to/markdown/file.md path/to/output/directory
+       >mix ex_mark2pdf path/to/markdown/file.md
        Loading pages (1/6)
        Counting pages (2/6)
        Resolving links (4/6)
@@ -21,7 +21,7 @@ defmodule Mix.Tasks.ExMark2pdf do
 
   """
 
-  @shortdoc "Markdown file to PDF file Generator. Please markdown file!!"
+  @shortdoc "Markdown to PDF Converter."
 
   def run(args) do
     #Regex.match?(~r/.+.md$|.+.txt$/, markdown_file_path)
