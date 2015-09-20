@@ -3,6 +3,39 @@
 ExMark2pdf
 ==========
 
+It provides the ability to convert from the markdown to the PDF.  
+
+Required wkhtmltopdf.  
+Download: [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html)  
+
+Dependency
+==========
+
+```elixir
+defp deps do
+  [...
+   {:ex_mark2pdf, "~> 0.0.1"},
+  ...]
+end
+```
+
+```cmd
+>mix deps.get
+```
+
+Usage
+=====
+
+Inputs:
+
+```cmd
+>mix ex_mark2pdf README.md
+```
+
+Output:
+
+PDF file is output to the current directory.
+
 Roadmap
 =======
 
@@ -10,5 +43,5 @@ Roadmap
 - [x] HTML file to PDF file.
 - [x] Mix Custom Task.
 - [x] Japanese correspondence.
-- [ ] Registration Hex Library.
+- [x] Registration Hex Library.
 - [ ] Specifying the output destination.
