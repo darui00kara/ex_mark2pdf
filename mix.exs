@@ -3,9 +3,10 @@ defmodule ExMark2pdf.Mixfile do
 
   def project do
     [app: :ex_mark2pdf,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 1.0",
-     description: "Create a PDF file from Markdown.",
+     escript: [main_module: ExMark2pdf.Main],
+     description: "Generate a PDF from Markdown file.",
      package: [
        contributors: ["darui00kara"],
        licenses: ["Free"],
